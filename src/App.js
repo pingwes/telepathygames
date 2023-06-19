@@ -13,6 +13,9 @@ export default function App() {
   const [deviceId, setDeviceId] = useLocalStorage("deviceId");
   const [loading, setLoading] = useState(true);
 
+  if (deviceId || loading)
+    console.log("deviceID: " + deviceId)
+
   useEffect(() => {
     if (!neurosity) {
       return;
