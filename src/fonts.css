@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Josefin_Sans';
+  src: url('./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orbit';
+  src: url('./fonts/Orbit/Orbit-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

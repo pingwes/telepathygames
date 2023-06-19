@@ -38,5 +38,15 @@ export function Login({ neurosity, user, setUser, setDeviceId }) {
     }
   }, [email, password, neurosity, user, setUser, setError]);
 
-  return <LoginForm onLogin={onLogin} loading={isLoggingIn} error={error} />;
+  return (
+    <div className="grid grid-cols-2 gap-x-20 font-orbit h-96">
+      <div className="border-2 text-5xl text-slate-50 font-orbit 
+        bg-gradient-to-r from-teal-400 via-cyan-400 to-orange-500 
+        px-10 py-10 ">Become a Jedi. <br/>Unlock a superpower.</div>
+      <div className="mx-auto border-2 px-10 py-10 w-full bg-slate-600/75 
+        text-slate-100">
+        <LoginForm onLogin={onLogin} loading={isLoggingIn} error={error} />
+      </div>
+    </div>
+  );
 }
