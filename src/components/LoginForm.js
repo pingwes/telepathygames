@@ -13,7 +13,7 @@ export function LoginForm({ onLogin, loading, error }) {
 
   return (
     <form className="card login-form" onSubmit={onSubmit}>
-      <h3 className="card-heading">Login</h3>
+      <h3 className="card-heading text-3xl">Login</h3>
       {!!error ? <h4 className="card-error">{error}</h4> : null}
       <div className="row">
         <label>Neurosity Device ID</label>
