@@ -18,7 +18,7 @@ import "./fonts.css"
 export default function App() {
   // const [neurosity, setNeurosity] = useState(null);
   // const [user, setUser] = useState(null);
-  // const [deviceId, setDeviceId] = useLocalStorage("deviceId");
+  const [deviceId, setDeviceId] = useLocalStorage("deviceId");
   // const [loading, setLoading] = useState(true);
 
 
@@ -42,14 +42,14 @@ export default function App() {
   //   };
   // }, [neurosity, user]);
 
-  // useEffect(() => {
-  //   if (deviceId) {
-  //     const neurosity = new Neurosity({ deviceId });
-  //     setNeurosity(neurosity);
-  //   } else {
-  //     // setLoading(false);
-  //   }
-  // }, [deviceId]);
+  useEffect(() => {
+    if (deviceId) {
+      const neurosity = new Neurosity({ deviceId });
+      setNeurosity(neurosity);
+    } else {
+      // setLoading(false);
+    }
+  }, [deviceId]);
 
   return (
     <div className="bg-gradient-to-t from-slate-900 to-fuchsia-800">
