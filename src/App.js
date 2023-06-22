@@ -12,11 +12,11 @@ import { Train } from "./pages/Train";
 import { Header } from './components/Header'
 // import { Footer } from './components/Footer'
 import "./fonts.css"
-// import { Neurosity } from "@neurosity/sdk";
+import { Neurosity } from "@neurosity/sdk";
 
 
 export default function App() {
-  // const [neurosity, setNeurosity] = useState(null);
+  const [neurosity, setNeurosity] = useState(null);
   // const [user, setUser] = useState(null);
   const [deviceId, setDeviceId] = useLocalStorage("deviceId");
   // const [loading, setLoading] = useState(true);
@@ -57,7 +57,7 @@ export default function App() {
       <div className="w-full h-1 bg-gradient-to-r  border from-teal-400 via-cyan-400 to-orange-500"></div>
       <div className="w-5/6 mx-auto h-1/2 mt-10 font-orbit ">
         <Router>
-          {/* <Login
+          <Login
             path="/"
             neurosity={neurosity}
             user={user}
@@ -73,7 +73,7 @@ export default function App() {
               setDeviceId("");
             }}
           />
-          <Calm path="/calm" neurosity={neurosity} user={user} /> */}
+          <Calm path="/calm" neurosity={neurosity} user={user} />
           <Home path="/home" />
           <Train path="/train" />
         </Router>
