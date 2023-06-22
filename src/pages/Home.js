@@ -1,8 +1,12 @@
 import game_with_galaxy_trails_waveform_small from "./../game_with_galaxy_trails_waveform_small.png"
 import { navigate } from "@reach/router";
+import { useEffect } from 'react';
 // import { Header } from '../components/Header'
 
 export function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <>
