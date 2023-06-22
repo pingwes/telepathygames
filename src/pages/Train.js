@@ -1,15 +1,18 @@
 import Wave from '../components/Wave'
-// import { navigate } from "@reach/router";
-// import React, {  useEffect, useRef } from 'react';
+import { navigate } from "@reach/router";
+import React, {  useEffect, useRef } from 'react';
 import useEventListener from '@use-it/event-listener'
 
-// let percentage = 0
 let start = false 
-// let currentX = 0;
+let currentX = 0;
 
 
 export function Train() {
-  // const canvasRef = useRef(null);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  const canvasRef = useRef(null);
 
   // enable space button
   const handler = (key) => {
@@ -22,49 +25,45 @@ export function Train() {
 
   useEventListener('keypress', handler)
 
-  // const draw = (context, currentX, endX, width, height) => {
-  //   // console.log("currentX: " + currentX)
-  //   // Clear the canvas
-  //   context.clearRect(0, 0, width, height);
+  const draw = (context, currentX, width, height) => {
+    // Clear the canvas
+    context.clearRect(0, 0, width, height);
     
 
-  //   // Draw the progress bar
-  //   context.fillStyle = '#007bff';
-  //   context.fillRect(0, 0, currentX, height);
+    // Draw the progress bar
+    context.fillStyle = '#007bff';
+    context.fillRect(0, 0, currentX, height);
 
 
-  //   // if (currentX < endX) {
-  //   //   requestAnimationFrame(draw);
-  //   // }
-  // };
+    // if (currentX < endX) {
+    //   requestAnimationFrame(draw);
+    // }
+  };
 
-  // useEffect(() => {
-  //   const canvas = canvasRef.current;
-  //   const context = canvas.getContext('2d');
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
 
-  //   // Set the canvas size
-  //   const width = canvas.width;
-  //   const height = canvas.height;
+    // Set the canvas size
+    const width = canvas.width;
+    const height = canvas.height;
 
-  //   // Calculate the end position of the progress bar
-  //   const endX = (percentage / 100) * width;
-
-  //   setInterval(() => {
-  //     // Start the animation
-  //     // Update the current position
-  //     if (start) {
-  //       currentX += 1;
-  //       draw(context, currentX, endX, width, height);
-  //     }
+    setInterval(() => {
+      // Start the animation
+      // Update the current position
+      if (start) {
+        currentX += 1;
+        draw(context, currentX, width, height);
+      }
      
 
-  //   }, 4)
-  // }, [percentage]);
+    }, 4)
+  }, []);
 
   return (
     <div className="h-screen text-white">
       <div className="grid place-items-center ">
-      {/* <h1 className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 mb-5">
+      <h1 className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 mb-5">
         UP
       </h1>
         <div className="my-5 text-center">
@@ -79,7 +78,7 @@ export function Train() {
         </div>
         <div className="my-5"> */}
           <Wave /> 
-        {/* </div>
+        </div>
         <div className="my-5">
           <button 
             className="border-2 px-6 py-2 text-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 mr-4 w-36"
@@ -95,7 +94,7 @@ export function Train() {
             >
             Cancel
           </button>
-        </div> */}
+        </div>
       </div>
     </div>
   )
