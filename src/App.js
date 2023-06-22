@@ -1,10 +1,12 @@
 // src/App.js
-import React, { useState, useEffect } from "react";
-import { Router, navigate } from "@reach/router";
-import useLocalStorage from "react-use/lib/useLocalStorage";
-import { Login } from "./pages/Login";
-import { Logout } from "./pages/Logout";
-import { Calm } from "./pages/Calm";
+// import React, { useState } from "react";
+import { Router } from "@reach/router";
+// import React, { useState, useEffect } from "react";
+// import { Router, navigate } from "@reach/router";
+// import useLocalStorage from "react-use/lib/useLocalStorage";
+// import { Login } from "./pages/Login";
+// import { Logout } from "./pages/Logout";
+// import { Calm } from "./pages/Calm";
 import { Home } from "./pages/Home";
 import { Train } from "./pages/Train";
 import { Header } from './components/Header'
@@ -15,8 +17,8 @@ import "./fonts.css"
 
 export default function App() {
   // const [neurosity, setNeurosity] = useState(null);
-  const [user, setUser] = useState(null);
-  const [deviceId, setDeviceId] = useLocalStorage("deviceId");
+  // const [user, setUser] = useState(null);
+  // const [deviceId, setDeviceId] = useLocalStorage("deviceId");
   // const [loading, setLoading] = useState(true);
 
 

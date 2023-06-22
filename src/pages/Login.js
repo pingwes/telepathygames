@@ -83,7 +83,9 @@ export function Login({ neurosity, user, setUser, setDeviceId }) {
           </div>
           <img 
             className="border-2 col-span-2"
-            src={game_with_galaxy_trails_waveform_small} />
+            src={game_with_galaxy_trails_waveform_small} 
+            alt="galaxy game"
+            />
         </div>
         <div className="grid grid-cols-5 gap-10 border-2 px-10 py-10 mt-5">
           <div className="col-span-3">
@@ -101,7 +103,9 @@ export function Login({ neurosity, user, setUser, setDeviceId }) {
           <div className="col-span-2 relative">
             <img 
               className="border-2 bg-gradient-to-r from-cyan-500 to-blue-500"
-              src={crown_gradient} />
+              src={crown_gradient} 
+              alt="neurosity crown"
+              />
             {/* <span className="border-2 -top-0 w-full h-full z-10 absolute bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20"/> */}
           </div>
           

@@ -32,7 +32,9 @@ export function Home() {
           <div className="">
           <img 
             className="border-2"
-            src={game_with_galaxy_trails_waveform_small} />
+            src={game_with_galaxy_trails_waveform_small}
+            alt="galaxy game"
+          />
           </div>
         </div>
       </div>
