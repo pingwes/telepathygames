@@ -1,7 +1,6 @@
 // src/App.js
-import { Router } from "@reach/router";
 import React, { useState, useEffect } from "react";
-// import { Router, navigate } from "@reach/router";
+import { Router, navigate } from "@reach/router";
 import useLocalStorage from "react-use/lib/useLocalStorage";
 import { Login } from "./pages/Login";
 import { Logout } from "./pages/Logout";
@@ -21,25 +20,25 @@ export default function App() {
   // const [loading, setLoading] = useState(true);
 
 
-  // useEffect(() => {
-  //   if (!neurosity) {
-  //     return;
-  //   }
+  useEffect(() => {
+    if (!neurosity) {
+      return;
+    }
   
-  //   const subscription = neurosity.onAuthStateChanged().subscribe((user) => {
-  //     if (user) {
-  //       setUser(user);
-  //     } 
-  //     else {
-  //       navigate("/");
-  //     }
-  //     // setLoading(false);
-  //   });
+    const subscription = neurosity.onAuthStateChanged().subscribe((user) => {
+      if (user) {
+        setUser(user);
+      } 
+      else {
+        navigate("/");
+      }
+      // setLoading(false);
+    });
   
-  //   return () => {
-  //     subscription.unsubscribe();
-  //   };
-  // }, [neurosity, user]);
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [neurosity, user]);
 
   useEffect(() => {
     if (deviceId) {
