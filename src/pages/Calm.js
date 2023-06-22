@@ -10,9 +10,8 @@ export function Calm({ user, neurosity }) {
       return;
     }
     
-
     const subscription = neurosity.calm().subscribe((calm) => {
-      setCalm(Number(calm.probability.toFixed(2)));
+        setCalm(Number(calm.probability.toFixed(2)));
     });
 
     return () => {
@@ -22,7 +21,9 @@ export function Calm({ user, neurosity }) {
 
   return (
     <main className="main-container">
-      {user ? <Nav neurosity={neurosity} /> : null}
+    stripped calm
+    {JSON.stringify(user)}
+      {/* {user ? <Nav neurosity={neurosity} /> : null} */}
       <div className="calm-score">
         &nbsp;{calm * 100}% <div className="calm-word">Calm</div>
       </div>
