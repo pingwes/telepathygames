@@ -8,7 +8,7 @@ import { Calm } from "./pages/Calm";
 import { Home } from "./pages/Home";
 import { Train } from "./pages/Train";
 import { Header } from './components/Header'
-import { Footer } from './components/Footer'
+// import { Footer } from './components/Footer'
 import "./fonts.css"
 import { Neurosity } from "@neurosity/sdk";
 
@@ -17,7 +17,7 @@ export default function App() {
   const [neurosity, setNeurosity] = useState(null);
   const [user, setUser] = useState(null);
   const [deviceId, setDeviceId] = useLocalStorage("deviceId");
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function App() {
       else {
         navigate("/");
       }
-      setLoading(false);
+      // setLoading(false);
     });
   
     return () => {
@@ -45,7 +45,7 @@ export default function App() {
       const neurosity = new Neurosity({ deviceId });
       setNeurosity(neurosity);
     } else {
-      setLoading(false);
+      // setLoading(false);
     }
   }, [deviceId]);
 

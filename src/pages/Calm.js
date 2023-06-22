@@ -1,6 +1,6 @@
 // src/pages/Calm.js
 import React, { useState, useEffect } from "react";
-import { Nav } from "../components/Nav";
+// import { Nav } from "../components/Nav";
 
 export function Calm({ user, neurosity }) {
   const [calm, setCalm] = useState(0);

@@ -1,6 +1,6 @@
 import game_with_galaxy_trails_waveform_small from "./../game_with_galaxy_trails_waveform_small.png"
 import { navigate } from "@reach/router";
-import { Header } from '../components/Header'
+// import { Header } from '../components/Header'
 
 export function Home() {
 

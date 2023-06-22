@@ -1,15 +1,15 @@
 import Wave from '../components/Wave'
-import { navigate } from "@reach/router";
-import React, { useEffect, useRef } from 'react';
+// import { navigate } from "@reach/router";
+// import React, {  useEffect, useRef } from 'react';
 import useEventListener from '@use-it/event-listener'
 
-let percentage = 0
+// let percentage = 0
 let start = false 
-let currentX = 0;
+// let currentX = 0;
 
 
 export function Train() {
-  const canvasRef = useRef(null);
+  // const canvasRef = useRef(null);
 
   // enable space button
   const handler = (key) => {
@@ -22,21 +22,21 @@ export function Train() {
 
   useEventListener('keypress', handler)
 
-  const draw = (context, currentX, endX, width, height) => {
-    // console.log("currentX: " + currentX)
-    // Clear the canvas
-    context.clearRect(0, 0, width, height);
+  // const draw = (context, currentX, endX, width, height) => {
+  //   // console.log("currentX: " + currentX)
+  //   // Clear the canvas
+  //   context.clearRect(0, 0, width, height);
     
 
-    // Draw the progress bar
-    context.fillStyle = '#007bff';
-    context.fillRect(0, 0, currentX, height);
+  //   // Draw the progress bar
+  //   context.fillStyle = '#007bff';
+  //   context.fillRect(0, 0, currentX, height);
 
 
-    // if (currentX < endX) {
-    //   requestAnimationFrame(draw);
-    // }
-  };
+  //   // if (currentX < endX) {
+  //   //   requestAnimationFrame(draw);
+  //   // }
+  // };
 
   // useEffect(() => {
   //   const canvas = canvasRef.current;
