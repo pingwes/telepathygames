@@ -38,6 +38,6 @@ export const PIPE_HEIGHT = CANVAS_HEIGHT / 2
 export const PIPE_GAP = CANVAS_HEIGHT / 2 - HEIGHT_GROUND - 50
 
 // movements
-export const JUMP_SPEED = -125
-export const FALL_SPEED = -125
-export const SPEED = 5
+export const JUMP_SPEED = -70
+export const FALL_SPEED = -70
+export const SPEED = 1.5

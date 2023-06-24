@@ -7,6 +7,7 @@ import { Logout } from "./pages/Logout";
 import { Calm } from "./pages/Calm";
 import { Home } from "./pages/Home";
 import { Train } from "./pages/Train";
+import { Game } from "./pages/Game";
 import { Header } from './components/Header'
 // import { Footer } from './components/Footer'
 import "./fonts.css"
@@ -51,9 +52,7 @@ export default function App() {
 
   return (
     <div className="bg-gradient-to-t from-slate-900 to-fuchsia-800">
-      <Header />
-      <div className="w-full h-1 bg-gradient-to-r  border from-teal-400 via-cyan-400 to-orange-500"></div>
-      <div className="w-5/6 mx-auto h-1/2 mt-10 font-orbit ">
+      
         <Router>
           <Login
             path="/"
@@ -74,10 +73,8 @@ export default function App() {
           <Calm path="/calm" neurosity={neurosity} user={user} />
           <Home path="/home" />
           <Train path="/train" />
+          <Game path="/game" />
         </Router>
-      </div>
-      {/* <div className="w-full h-1 bg-gradient-to-r border from-teal-400 via-cyan-400 to-orange-500"></div>
-      <Footer /> */}
     </div>
   );
 }
